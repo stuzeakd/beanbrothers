@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Lorimer No 2 Condensed";
+  src: url('/beanbrothers/font/SeoulNamsan Jang EB.eot');
+  src: 
+    url("/beanbrothers/font/SeoulNamsan Jang EB.woff") format("woff"),
+    url("/beanbrothers/font/SeoulNamsan Jang EB.otf") format("opentype");
+}
 html, body {
     font-family: "Lorimer No 2 Condensed";
     font-weight: 900;
