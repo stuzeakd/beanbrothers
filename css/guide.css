@@ -1,9 +1,9 @@
 @font-face {
   font-family: "SeoulNamsanM";
-  src: url('/font/SeoulNamsanM.eot');
+  src: url('/beanbrothers/font/SeoulNamsanM.eot');
   src: local("☺"),
-    url("/font/SeoulNamsanM.woff") format("woff"),
-    url("/font/SeoulNamsanM.otf") format("opentype");
+    url("/beanbrothers/font/SeoulNamsanM.woff") format("woff"),
+    url("/beanbrothers/font/SeoulNamsanM.otf") format("opentype");
 }
 
 html, body {
@@ -37,7 +37,7 @@ html, body {
     width : 270px;
         
     background-repeat: no-repeat;
-    background-image: url('/image/BEANBROTHERS.png');
+    background-image: url('/beanbrothers/image/BEANBROTHERS.png');
     background-size: contain;   
 }
 #right-nav {
@@ -133,7 +133,7 @@ html, body {
     transition: all 0.5s ease;
     
     background-repeat: no-repeat;
-    background-image: url('/image/BEANBROTHERS.png');
+    background-image: url('/beanbrothers/image/BEANBROTHERS.png');
     background-size: contain;
 }
 #mobile-header .wrapper .login {
@@ -144,7 +144,7 @@ html, body {
     font-size: 20px;
 }
 #mobile-nav-trigger:checked ~ #mobile-header .logo {
-    background-image: url('/image/BEANBROTHERS_white.png');
+    background-image: url('/beanbrothers/image/BEANBROTHERS_white.png');
 }
 #mobile-menu {
     z-index: 10;
@@ -174,7 +174,7 @@ html, body {
     transition: all 0.5s ease;
     
     background-repeat: no-repeat;
-    background-image: url('/image/sublogo.png');
+    background-image: url('/beanbrothers/image/sublogo.png');
     background-size: contain;
 
 }
@@ -229,16 +229,16 @@ footer .icon {
     height : 20px;
 }
 .icon-coffee {
-    background: url(/image/coffee-36.png) no-repeat;
+    background: url(/beanbrothers/image/coffee-36.png) no-repeat;
     background-size: contain;
 
 }
 .icon-facebook {
-    background: url(/image/facebook-36.png) no-repeat;
+    background: url(/beanbrothers/image/facebook-36.png) no-repeat;
     background-size: contain;
 }
 .icon-instagram {
-    background: url(/image/instagram-36.png) no-repeat;
+    background: url(/beanbrothers/image/instagram-36.png) no-repeat;
     background-size: contain;
 }
 #sns, #contact, #aboutus {
@@ -261,7 +261,7 @@ footer .icon {
 
     width : 100%;
     height : 100%;
-    background: url(/image/coffee_theater.jpg) no-repeat;
+    background: url(/beanbrothers/image/coffee_theater.jpg) no-repeat;
     background-size: cover;
     overflow: hidden;
 }
