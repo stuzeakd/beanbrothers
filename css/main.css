@@ -118,8 +118,10 @@ html, body {
 
 }
 .logo {
-
-    transition: opacity 0.3s ease;
+    -webkit-transition: opacity 0.3s ease;
+       -moz-transition: opacity 0.3s ease;
+         -o-transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease;
     visibility: hidden;
     opacity: 0;   
 }
@@ -207,7 +209,10 @@ html, body {
     width : 100%;
     height : 20%;
     background-color: white;
-    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+       -moz-transition: all 0.5s;
+         -o-transition: all 0.5s;
+            transition: all 0.5s;
 }
 #mobile-toggle span{    
     margin: 40% 0;
@@ -236,7 +241,11 @@ html, body {
 }
 #mobile-nav-trigger:checked ~ #mobile-toggle span:after{
     background-color: white;
-    transform: translate(0px, -10px) rotate(45deg);   
+    -webkit-transform: translate(0px, -10px) rotate(45deg);   
+       -moz-transform: translate(0px, -10px) rotate(45deg);   
+         -o-transform: translate(0px, -10px) rotate(45deg);   
+            transform: translate(0px, -10px) rotate(45deg);   
+    
 }
 
 #mobile-header {
@@ -249,7 +258,11 @@ html, body {
     height : 48px;
 }
 #mobile-header .cart {
-    transition: color 0.5s linear;
+    
+    -webkit-transition: color 0.5s linear;
+       -moz-transition: color 0.5s linear;
+         -o-transition: color 0.5s linear;
+            transition: color 0.5s linear;
     padding-top: 14px;
     font-size: 20px;
 
@@ -263,7 +276,10 @@ html, body {
     height : 32px;
     width : 216px;
     
-    transition: all 0.5s ease, opacity 0.3s ease;
+    -webkit-transition: all 0.5s ease, opacity 0.3s ease;
+       -moz-transition: all 0.5s ease, opacity 0.3s ease;
+         -o-transition: all 0.5s ease, opacity 0.3s ease;
+            transition: all 0.5s ease, opacity 0.3s ease;
     
     background-repeat: no-repeat;
     background-image: url('/beanbrothers/image/BEANBROTHERS_white.png');
@@ -288,7 +304,11 @@ html, body {
 
     width : 100%;
     height : 100%;
-    transition: all 0.5s linear;
+    
+    -webkit-transition: all 0.5s linear;
+       -moz-transition: all 0.5s linear;
+         -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
     visibility: hidden;
     opacity: 0;
     background: radial-gradient(circle, rgba(0,0,0,0.5) , #000); 
@@ -305,7 +325,11 @@ html, body {
     height : 12px;
     width : 180px;
     
-    transition: all 0.5s ease;
+    
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
     
     background-repeat: no-repeat;
     background-image: url('/image/sublogo.png');
@@ -371,7 +395,10 @@ footer .icon {
     background-size: contain;
 }
 #sns, #contact, #aboutus {
-    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
     float : left;
     width : auto;
     margin-right: 120px;
