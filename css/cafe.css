@@ -1,0 +1,663 @@
+@font-face {
+  font-family: "SeoulNamsanM";
+  src: url('/font/SeoulNamsanM.eot');
+  src: local("☺"),
+    url("/font/SeoulNamsanM.woff") format("woff"),
+    url("/font/SeoulNamsanM.otf") format("opentype");
+}
+@font-face {
+  font-family: "SeoulNamsanL";
+  src: url('/font/SeoulNamsanL.eot');
+  src: local("☺"),
+    url("/font/SeoulNamsanL.woff") format("woff"),
+    url("/font/SeoulNamsanL.otf") format("opentype");
+}
+
+html, body {
+    font-family: "Lorimer No 2 Condensed";
+    font-weight: 900;
+    position : absolute;
+    width : 100%;
+    height : 100%;
+}
+#wrapper {
+    position : absolute;
+    height : 100%;
+    width : 100%;
+}
+#desktop-header {
+    position: fixed;
+    z-index: 30;
+    display: block;
+    height : 60px;
+    width : 100%;
+        
+    background-color : rgba(255,255,255,0.4);
+}
+#desktop-header .wrapper {
+    width : 100%;
+    height : 100%;
+    font-size: 1.4em;
+}
+#desktop-header .logo {
+    float: left;
+    
+    margin: 8px;
+    display: block;
+    height : 40px;
+    width : 270px;
+        
+    background-repeat: no-repeat;
+    background-image: url('/image/BEANBROTHERS.png');
+    background-size: contain;  
+
+}
+#right-nav {
+    float : right;
+    padding-right: 20px;
+    margin-top: 20px;
+    border-left: 1px solid grey;
+}
+#right-nav * {
+    margin-left: 20px;
+    display: inline-block;
+}
+#left-nav {
+    float : right;   
+    margin-top: 20px;
+}
+#left-nav * {
+    margin-right: 20px;
+    display: inline-block;
+}
+
+#mobile-nav-trigger {
+    display: none;   
+}
+#mobile-toggle {
+    display: none;
+    z-index: 23;
+    position: fixed;
+    top: 0;    
+    right : 0;
+    margin: 11px;
+    width : 25px;
+    height : 25px;
+}
+#mobile-toggle span, #mobile-toggle span:before, #mobile-toggle span:after{
+    display : block;
+    width : 100%;
+    height : 20%;
+    background-color: black;
+    transition: all 0.5s;
+}
+#mobile-toggle span{    
+    margin: 40% 0;
+    top : 40%;
+}
+#mobile-toggle span:before, #mobile-toggle span:after{
+    position: absolute;
+    content : "";
+}
+#mobile-toggle span:before{
+    top : 0;
+}
+#mobile-toggle span:after {
+    top : 80%;
+}
+
+#mobile-nav-trigger:checked ~ #mobile-toggle span{
+    background: transparent;   
+}
+#mobile-nav-trigger:checked ~ #mobile-toggle span:before{
+    background-color: white;
+    -webkit-transform: translate(0px, 10px) rotate(-45deg);
+       -moz-transform: translate(0px, 10px) rotate(-45deg);
+         -o-transform: translate(0px, 10px) rotate(-45deg);
+            transform: translate(0px, 10px) rotate(-45deg);
+}
+#mobile-nav-trigger:checked ~ #mobile-toggle span:after{
+    background-color: white;
+    transform: translate(0px, -10px) rotate(45deg);   
+}
+
+#mobile-header {
+    display: none;
+    position: fixed;
+    z-index: 22;
+    width : 100%;
+    height : 48px;
+}
+#mobile-header .cart {
+    transition: color 0.5s linear;
+    padding-top: 14px;
+    font-size: 20px;
+}
+#mobile-header .wrapper {
+    height : 100%;
+}
+#mobile-header .wrapper .logo {
+    margin-top: 8px;
+    display: inline-block;
+    height : 32px;
+    width : 216px;
+    
+    transition: all 0.5s ease;
+    
+    background-repeat: no-repeat;
+    background-image: url('/image/BEANBROTHERS.png');
+    background-size: contain;
+}
+#mobile-header .wrapper .login {
+    transition: all 0.5s linear;
+    float : right;   
+    padding-top: 14px;
+    margin-right: 20px;
+    font-size: 20px;
+}
+#mobile-nav-trigger:checked ~ #mobile-header .logo {
+    background-image: url('/image/BEANBROTHERS_white.png');
+}
+#mobile-menu {
+    z-index: 21;
+    position: fixed;
+    top:0;
+    display : none;
+
+    width : 100%;
+    height : 100%;
+    transition: all 0.5s linear;
+    visibility: hidden;
+    opacity: 0;
+    background: radial-gradient(circle, #888 , #000); 
+    text-align: center;
+}
+#mobile-menu * {
+    color : white;   
+    font-size : 1.3em;
+}
+#sublogo {
+    z-index: 22;
+    margin-top: 50px;
+    display: inline-block;
+    height : 12px;
+    width : 180px;
+    
+    transition: all 0.5s ease;
+    
+    background-repeat: no-repeat;
+    background-image: url('/image/sublogo.png');
+    background-size: contain;
+
+}
+#mobile-menu > .wrapper {
+    overflow-x: hidden;
+    
+    max-height: 100%;
+    max-width: 100%;
+    width : 100%;
+    margin-top: 20%;
+    text-align: center;
+}
+
+#mobile-nav-trigger:checked ~ #mobile-menu {
+    visibility: visible;
+    opacity: 0.8; 
+}
+footer {
+    width : 100%;   
+    font-size: 1.1em;
+}
+footer h1 {
+    font-size : 1.6em;   
+}
+footer ul {
+    margin : 20px 0;   
+}
+footer li {
+    padding: 5px 0;   
+}
+#sns ul li {
+    float : left; 
+    margin-right : 10px;
+}
+footer .wrapper  {
+    width : 100%;
+    margin: 0 auto;
+    left : 0; right : 0;
+}
+footer .icon {
+    display: inline-block;
+            filter: invert(0.7);
+    -webkit-filter: invert(0.7);
+    width : 20px;
+    height : 20px;
+}
+.icon-coffee {
+    background: url(/image/coffee-36.png) no-repeat;
+    background-size: contain;
+
+}
+.icon-facebook {
+    background: url(/image/facebook-36.png) no-repeat;
+    background-size: contain;
+}
+.icon-instagram {
+    background: url(/image/instagram-36.png) no-repeat;
+    background-size: contain;
+}
+#sns, #contact, #aboutus {
+    transition: all 0.5s linear;
+    float : left;
+    width : auto;
+    margin-right: 120px;
+}
+
+#legal {
+    float : left;
+    width : 100%;
+    margin-top: 80px;
+    padding-top: 30px;
+    border-top : 1px solid #aaa;
+}
+/* cafe content */
+
+#content {
+    position : relative;
+    margin-top : 60px;
+}
+#content > .wrapper {
+    width : 80%;
+    position: absolute;
+    margin : 0 auto;
+    left : 0; right :0;
+    
+}
+#cafe-header {
+    z-index: 20;
+    padding-top : 60px;
+    width : 34px;
+    margin-left: 20px;
+    position : fixed;
+}
+#cafe-header .wrapper {
+    padding : 0;   
+}
+#cafe-header ul {
+    width : 100%;
+    text-align: center;
+}
+#cafe-header li {
+    padding: 15px 5px;
+    display: inline-block;
+}
+
+#backtotop {   
+    position : fixed;
+    width : 100%;
+    height : 0;
+    margin : auto 0;   
+    top : 0; left :0; bottom: 0; right : 0;
+/*        margin-right: 10px;*/
+}
+#backtotop .wrapper {
+    padding-right: 10px;
+    position: absolute;
+    right : 0;
+}
+#backtotop a {
+    display: inline-block;
+    transform: rotate(90deg);   
+}
+
+.cafe-active {
+    background-color: black;
+    transition : all 0.1s linear, background 0.5s linear;
+}
+.cafe-active > a {
+    color : white;
+    transition: color 0.5s linear;
+}
+.cafe {
+    position: relative;
+    width : 100%;
+    min-height : 500px;
+}
+.cafe-title {
+    position : relative;
+    height : 100px;
+}
+.cafe-title > .wrapper {
+    position: absolute;
+    width : 80%;
+    margin : 0 auto;
+    left : 0; right : 0;
+    padding : 40px 0;
+    text-align: center;
+    font-family: SeoulNamsanM;
+    font-size : 1.2em;
+}
+.cafe .imageslider {
+    overflow: hidden;
+}
+
+
+.script {
+    font-family: SeoulNamsanL;
+    font-size : 0.8em;
+    line-height: 170%;
+    margin-right : 20px;
+}
+.script p{
+    line-height: 170%;
+    margin : 1.3em 0;
+    
+}
+#hapjeong {
+    position: relative;
+    width : 100%;
+}
+#hapjeong > .wrapper {
+    position: relative;
+    padding-top : 800px;
+    background: black;
+    width : 100%;
+}
+#hapjeong .getdown {
+    position: relative;
+    width : 100%;
+    text-align: center;
+    height : 100px;
+}
+#hapjeong .getdown img {
+    display: inline-block;
+    position: absolute;
+    margin: auto;
+    top : 0; bottom : 0; left : 0; right : 0;
+}
+#hapjeong .cafe-title {
+    position : relative;
+    background: black;
+    height : 100px;
+}
+#hapjeong .cafe-title * {
+    color : white;
+}   
+#hapjeong .cafe-title > .wrapper {
+    border-top : 1px solid #888;
+}
+#hapjeong .article {
+    width : 100%;
+    min-height : 400px;
+    position : relative;
+}
+#hapjeong .article .left {
+    width : 40%;
+    float : left;
+}
+#hapjeong .article .left .lamp{
+    width : 100%;
+    text-align: center;
+}
+#hapjeong .article .left .lamp img{
+    width : 80px;   
+}
+#hapjeong .article .left .word{
+    padding-top : 50px;
+    width : 100%;
+    text-align: center;
+}
+#hapjeong .article .left .word h1{
+    font-size: 1.2em;   
+}
+
+#hapjeong .article .right {
+
+    width : 60%;
+    float : right;
+}
+#hapjeong .article .right .script{
+    padding-top : 40px;
+    margin-right: 50px;
+}
+
+#dcubecity {
+    width : 100%;
+    position: relative;
+}
+#dcubecity > .wrapper {
+    width : 100%;   
+}
+#dcubecity .cafe-title > .wrapper {
+    border-bottom : 1px solid black; 
+}
+#dcubecity .hat {
+    margin-top: 10px;
+    position: relative;
+    width : 100%;
+    text-align: center;
+    height : 320px;    
+    background: white;
+}
+#dcubecity .hat > img{
+    display: inline-block;
+    position: absolute;
+    margin: auto;
+    top : 0; bottom : 0; left : 0; right : 0;
+    height : 50%;       
+}
+#dcubecity .main-img {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+#dcubecity .main-img > img{
+    width : 100%;
+}
+#dcubecity .script {
+    margin: 0 40px;
+    left : 0; right : 0;
+    padding-top: 50px;
+}   
+
+
+.cafe .atwork {
+    height : 100px;
+    width : 100px;
+    
+    position: absolute;
+    margin: auto;
+    top : 0; right : 0; left :0; bottom :0;
+}
+@media only screen and (max-width : 960px){
+    #desktop-header {
+        display: none;   
+    }
+    #mobile-header {
+        display: block;   
+    }
+    #mobile-toggle {
+        display: inline-block;   
+    }
+    #mobile-menu {
+        display: block;
+        right : 0;
+        width : 45%;
+    }
+    #mobile-header .wrapper {
+        width : 80%;   
+        display: block;
+        margin : 0 auto;
+        left : 0; right : 0;
+    }
+    #mobile-header .logo {
+        float : left;
+    }   
+    #mobile-header .cart {
+        float : right;
+    }
+    .ipad {
+        display : block;   
+    }
+    .mobile {
+        display: none;   
+    }
+    #mobile-toggle {
+        margin-right: 10%;   
+    }
+    #mobile-header .cart {
+        margin-right: 50px;
+    }
+    #sns, #contact, #aboutus {
+        margin-right: 60px;
+    }
+
+    
+    #cafe-header {
+        margin-left: 10px;
+    }
+    #backtotop .wrapper {
+        padding : 0;
+    }
+/*
+    #backtotop {
+        
+        position : fixed;
+        width : 100%;
+        height : 100%;
+        right : 0;
+        top : 0;
+        margin-right: 10px;
+    }
+    #backtotop .wrapper {
+        transform: rotate(90deg);
+        width : 100%;
+        text-align: center;
+        position: absolute;
+        margin : auto 0;   
+        top : 0; bottom: 0;
+
+    }
+*/
+
+/*
+    #backtotop .wrapper {
+        width : 100%;
+        height : 0;
+        text-align: center;   
+        position: absolute;
+        margin : auto 0;   
+        top : 0; bottom: 0;
+    }
+*/
+}
+@media only screen and (max-width : 480px){
+    #desktop-header {
+        display: none;   
+    }
+    #mobile-header {
+        display: block;   
+    }
+    #mobile-toggle {
+        display: inline-block; 
+        margin-right: 11px;
+    }
+    #mobile-menu {
+        display: block;
+        width : 100%;
+    }
+    #mobile-header {
+        clear : both;   
+    }
+    #mobile-header .wrapper {
+        text-align: center;
+        width : 100%;   
+    }
+    #mobile-header .logo {
+        float: none;
+    }
+    #mobile-header .cart {
+        margin-left: 11px;
+        position : absolute;
+        left : 0;
+    }
+    .ipad {
+        display : none;   
+    }
+    .mobile {
+        display : block;   
+    }
+    #aboutus {
+        width : 100%;   
+    }
+    #contact {
+        width : 100%; 
+    }
+    #sns {
+        width : 100%;   
+    }
+    
+    #content {
+        margin-top : 78px;
+    }
+    #content > .wrapper {
+        width : 100%;   
+    }
+    .footer > .wrapper {
+        width : 80%;   
+    }
+    #cafe-header {
+        width : 100%;
+        padding-top : 48px;
+        margin: 0;
+    }
+    #cafe-header ul {
+        width : 100%;
+        height : 20px;
+        padding : 5px 0;
+    }
+    #cafe-header li {
+        padding : 5px 10px;
+    }
+    #hapjeong .article {
+        width : 80%;
+        margin: 0 auto;
+        left : 0; right :0;
+    }
+    #hapjeong .article .left {
+        width : 100%;
+        position : relative;
+        float : none;
+    }
+    #hapjeong .article .right {
+        width : 100%;
+        position : relative;
+        float : none;
+    }
+    #hapjeong .article .right .script{
+        margin : 0;
+        padding : 20px 0;
+    }
+    #backtotop {
+        transform: none;
+        position : relative;
+    }
+    #backtotop {   
+        width : 100%;
+        top : auto; left :auto; bottom: auto; right : auto;
+        height : auto;
+    /*        margin-right: 10px;*/
+    }
+    #backtotop .wrapper {
+        padding : 30px 0;
+        position: relative;
+        right : auto;
+        text-align: center;
+    }
+    #backtotop a {
+        padding : 10px 0;
+        border-bottom: 1px solid black;
+        transform: none;  
+    }
+    
+}

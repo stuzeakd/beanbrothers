@@ -1,0 +1,825 @@
+html, body {
+    font-family: "Lorimer No 2 Condensed";
+    font-weight: 900;
+    position : absolute;
+    width : 100%;
+    height : 100%;
+}
+#wrapper {
+    font-size: 1.3em;
+    position : absolute;
+    width : 100%;
+    height : 100%;
+}
+#intro-container {
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    max-height: 100%;
+    z-index: 11;
+}
+#intro {
+
+    background: url(/image/big.jpg) no-repeat;
+    background-size: 101% auto;
+    background-position: 0 40%;
+    position: relative;
+
+    width : 100%;
+
+    line-height: 0;
+
+}
+#bg-small {
+    display: none;
+}
+#bg-middle {
+    display: none
+}
+#bg-big {
+    display: inline-block;
+    width : 100%;   
+    visibility: hidden;
+}
+#intro > .wrapper {
+    position: absolute;
+    top : 0; left : 0; right :0 ; bottom :0;
+    margin: 0 auto;
+    width: 78%;
+    height : 100%;
+
+}
+#intro .sns {
+    padding-top: 50px;
+    position: relative;
+    width : 100%;
+    height : 40px;
+}
+
+#intro .sns_a {
+    display: inline-block;
+    float: right;
+    margin-left: 30px;
+}
+
+.icon {
+    display: inline-block;
+            filter: invert(0.7);
+    -webkit-filter: invert(0.7);
+}
+.icon-coffee {
+    background: url(/image/coffee-36.png) no-repeat;
+    background-size: contain;
+    width : 24px;
+    height : 24px;
+}
+.icon-facebook {
+    background: url(/image/facebook-36.png) no-repeat;
+    background-size: contain;
+    
+    width : 24px;
+    height : 24px;
+}
+.icon-instagram {
+    background: url(/image/instagram-36.png) no-repeat;
+    background-size: contain;
+    
+    width : 24px;
+    height : 24px;
+}
+#intro .contact {
+    position: relative;
+    line-height: normal;
+    margin : 37% auto 0 auto;
+    padding-top: 3%;
+    width : 100%;
+    height : 20%;
+    
+    font-size: 0.9em;
+}
+#intro .contact *{
+    color : white;
+}
+#intro .phone {
+    margin-left: 30px;
+    float : right;   
+}
+#intro .business { 
+    margin-left: 30px;
+    float : right;
+}
+
+
+
+#bg-img {
+    position: absolute;
+    width : 100%;
+    top : 0;   
+
+}
+.logo {
+
+    transition: opacity 0.3s ease;
+    visibility: hidden;
+    opacity: 0;   
+}
+.logo.show{
+
+    visibility: visible;
+    opacity: 1; 
+}
+#desktop-header {
+    width : 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 20px 0;
+    z-index : 30;
+}
+#desktop-header > .logo {
+    position: absolute;
+    height: 40px;
+    padding-bottom: 10px;
+}
+#desktop-header > .logo.show {
+    position: relative;
+}
+#desktop-header.fade {
+    background-color: rgba(0,0,0,0.7);
+}
+#desktop-header.fade * {
+    color : white;   
+}
+#desktop-header.fixed {
+    position: fixed;
+
+    top : 0;
+    bottom : auto;
+    background-color: rgba(0,0,0,0.9);
+}
+#desktop-header.fade * {
+    color : white;   
+}
+
+#desktop-header > .wrapper {
+    width : 78%;
+    margin: 0 auto;
+}
+#desktop-header > .logo {
+    width : 78%;
+    margin : 0 auto;
+}   
+#desktop-header *{
+    color : white;   
+}
+#left-nav{
+    
+}
+#right-nav{
+    border-left: 1px solid white;
+}
+.major-menu {
+    display: inline-block;
+    float: left;
+    margin-right: 80px;
+}
+
+.minor-menu {
+    display: inline-block;
+    float: right;
+    margin-left: 80px;
+}
+
+#mobile-nav-trigger {
+    display: none;   
+}
+#mobile-toggle {
+    display: none;
+    z-index: 23;
+    position: fixed;
+    top: 0;    
+    right : 0;
+    margin: 11px;
+    width : 25px;
+    height : 25px;
+}
+#mobile-toggle span, #mobile-toggle span:before, #mobile-toggle span:after{
+    display : block;
+    width : 100%;
+    height : 20%;
+    background-color: white;
+    transition: all 0.5s;
+}
+#mobile-toggle span{    
+    margin: 40% 0;
+    top : 40%;
+}
+#mobile-toggle span:before, #mobile-toggle span:after{
+    position: absolute;
+    content : "";
+}
+#mobile-toggle span:before{
+    top : 0;
+}
+#mobile-toggle span:after {
+    top : 80%;
+}
+
+#mobile-nav-trigger:checked ~ #mobile-toggle span{
+    background: transparent;   
+}
+#mobile-nav-trigger:checked ~ #mobile-toggle span:before{
+    background-color: white;
+    -webkit-transform: translate(0px, 10px) rotate(-45deg);
+       -moz-transform: translate(0px, 10px) rotate(-45deg);
+         -o-transform: translate(0px, 10px) rotate(-45deg);
+            transform: translate(0px, 10px) rotate(-45deg);
+}
+#mobile-nav-trigger:checked ~ #mobile-toggle span:after{
+    background-color: white;
+    transform: translate(0px, -10px) rotate(45deg);   
+}
+
+#mobile-header {
+    color : white;
+    display: none;
+    position: fixed;
+    top : 0;
+    z-index: 22;
+    width : 100%;
+    height : 48px;
+}
+#mobile-header .cart {
+    transition: color 0.5s linear;
+    padding-top: 14px;
+    font-size: 20px;
+
+}
+#mobile-header .wrapper {
+    height : 100%;
+}
+#mobile-header .wrapper .logo {
+    margin-top: 8px;
+    display: inline-block;
+    height : 32px;
+    width : 216px;
+    
+    transition: all 0.5s ease, opacity 0.3s ease;
+    
+    background-repeat: no-repeat;
+    background-image: url('/image/BEANBROTHERS_white.png');
+    background-size: contain;
+}
+
+#mobile-header .wrapper .login {
+    transition: all 0.5s linear;
+    float : right;   
+    padding-top: 14px;
+    margin-right: 20px;
+    font-size: 20px;
+}
+#mobile-nav-trigger:checked ~ #mobile-header .logo {
+    background-image: url('/image/BEANBROTHERS_white.png');
+}
+#mobile-menu {
+    z-index: 21;
+    position: fixed;
+    top:0;
+    display : none;
+
+    width : 100%;
+    height : 100%;
+    transition: all 0.5s linear;
+    visibility: hidden;
+    opacity: 0;
+    background: radial-gradient(circle, rgba(0,0,0,0.5) , #000); 
+    text-align: center;
+}
+#mobile-menu * {
+    color : white;   
+    font-size : 1.3em;
+}
+#sublogo {
+    z-index: 22;
+    margin-top: 50px;
+    display: inline-block;
+    height : 12px;
+    width : 180px;
+    
+    transition: all 0.5s ease;
+    
+    background-repeat: no-repeat;
+    background-image: url('/image/sublogo.png');
+    background-size: contain;
+
+}
+#mobile-menu > .wrapper {
+    overflow-x: hidden;
+    
+    max-height: 100%;
+    max-width: 100%;
+    width : 100%;
+    margin-top: 20%;
+    text-align: center;
+}
+
+#mobile-nav-trigger:checked ~ #mobile-menu {
+    visibility: visible;
+    opacity: 0.9; 
+}
+footer {
+    background-color: white;
+    width : 100%;   
+    font-size: 1.1em;
+    padding-top: 100px;
+}
+footer h1 {
+    font-size : 1.6em;   
+}
+footer ul {
+    margin : 20px 0;   
+}
+footer li {
+    padding: 5px 0;   
+}
+#sns ul li {
+    float : left; 
+    margin-right : 10px;
+}
+footer .wrapper  {
+    width : 80%;
+    margin: 0 auto;
+    left : 0; right : 0;
+}
+footer .icon {
+    display: inline-block;
+            filter: invert(0.7);
+    -webkit-filter: invert(0.7);
+    width : 20px;
+    height : 20px;
+}
+.icon-coffee {
+    background: url(/image/coffee-36.png) no-repeat;
+    background-size: contain;
+
+}
+.icon-facebook {
+    background: url(/image/facebook-36.png) no-repeat;
+    background-size: contain;
+}
+.icon-instagram {
+    background: url(/image/instagram-36.png) no-repeat;
+    background-size: contain;
+}
+#sns, #contact, #aboutus {
+    transition: all 0.5s linear;
+    float : left;
+    width : auto;
+    margin-right: 120px;
+}
+
+#legal {
+    float : left;
+    width : 100%;
+    margin-top: 80px;
+    padding-top: 30px;
+    border-top : 1px solid #aaa;
+}
+
+#content {
+    width : 100%;
+    z-index: 10;
+    background-color: black;
+}
+.section {
+    position: relative;
+    width : 100%;
+    max-height: 100%;
+}
+.notice {
+    text-align: center;
+    background-color: black;
+    color : white;
+}
+.notice > .wrapper {
+    width : 87%;   
+    padding: 50px 0;
+    min-height : 300px;
+    
+    margin: auto;
+}
+.notice .title {
+    width : 100%;
+}
+.notice .subtitle {
+    padding-top: 20px;
+    width : 100%;   
+}
+.notice .line {
+    display: inline-block;
+    border: solid 2px white;    
+    width : 20%;
+    margin: 10px 0;
+}
+.notice .detail {
+    padding-bottom : 20px;
+    width : 100%;
+}
+.notice h1 {
+    font-size : 1.3em;
+}
+.notice h2 {
+    font-size: 1.2em;
+}
+.notice h3 {
+    font-size : 1.0em;
+    
+}
+.coffeemain {
+    width : 100%;
+}
+#bg-coffeemain {
+    width: 100%;
+    max-height : 90vh;
+    overflow: hidden;
+    background: url(/image/theater3.jpg) no-repeat;
+    background-size: 101% auto;
+    background-position: center center;
+    line-height: 0;
+}
+#bg-coffeemain > img {
+
+    width : 100%;   
+/*    vertical-align: middle;*/
+    visibility: hidden;
+}
+.coffeemain > .wrapper {
+    min-width : 200px;
+    max-width : 300px;
+    width : 30%;
+    height : 100%;
+    position: absolute;
+    margin: 0 auto;
+    top : 0; left : 0; right : 0;
+    font: 0 a; 
+    
+}
+.coffeemain .wrapper:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;   
+}
+.coffeemain .text {
+    vertical-align: baseline;  
+    display: inline-block;
+    width : 100%;
+    padding-bottom: 50px;
+}
+.coffeemain .text > img {
+    width :100%;   
+    margin-bottom: 5px;
+        
+}
+.coffeeguide {
+    background-color: white;   
+}
+.coffeeguide .wrapper {
+    padding: 100px 0;
+    width : 87%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.coffeeguide .coffee {
+    float: left;
+    display: block;
+    width : 33%;   
+    text-align: center;
+}
+.coffeeguide .coffee img {
+       
+}
+.guide {
+    
+}   
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+    #intro {
+        background: url(/image/small.jpg) no-repeat;
+        background-size: contain;
+    }
+    #desktop-header {
+        display: none;   
+    }
+    #mobile-header {
+        display: block;   
+    }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+}
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+@media only screen and (max-width : 1027px){
+    #intro {
+        background: url(/image/big.jpg) no-repeat;
+        background-position: 0% 60%;
+        background-size: cover;
+    }
+    #bg-small {
+        display: none;
+    }
+    #bg-middle {
+        display: none
+    }
+    #bg-big {
+        display: inline-block;
+        width : 100%;   
+        visibility: hidden;
+    }
+
+    #desktop-header {
+        display: block;   
+    }
+    #mobile-toggle {
+        display: none;   
+    }
+    #mobile-menu {
+        display: none;
+    }
+}
+@media only screen and (max-width : 960px){
+    #intro {
+        background: url(/image/middle.jpg) no-repeat;
+        background-size: 101% auto;
+        background-position: 0 0;
+    }
+    #intro .wrapper {
+        width : 80%;   
+    }
+    #intro .contact {
+        margin-top: 40%;
+        width : 90%;
+        font-size : 1.1em;
+    }
+    #intro .business, #intro .phone {
+        float : left;
+        margin: 10px 0;
+        display: inline-block;
+        width : 100%;
+    }
+    
+    #bg-small {
+        display: none;
+    }
+    #bg-middle {
+        display: inline-block;
+        width : 100%;   
+        visibility: hidden;
+    }
+    #bg-big {
+        display: none
+    }
+        #desktop-header {
+        display: none;   
+    }
+    
+    #mobile-header {
+        display: block;   
+    }
+    #mobile-toggle {
+        display: inline-block;   
+    }
+    #mobile-menu {
+        display: block;
+        right : 0;
+        width : 45%;
+    }
+    #mobile-header .wrapper {
+        width : 80%;   
+        display: block;
+        margin : 0 auto;
+        left : 0; right : 0;
+    }
+    #mobile-header .logo {
+        float : left;
+    }   
+    #mobile-header .cart {
+        float : right;
+    }
+    .ipad {
+        display : block;   
+    }
+    .mobile {
+        display: none;   
+    }
+    #mobile-toggle {
+        margin-right: 10%;   
+    }
+    #mobile-header .cart {
+        margin-right: 50px;
+    }
+    #sns, #contact, #aboutus {
+        margin-right: 60px;
+    }
+
+    #content {
+        padding-top : 48px;
+    }
+
+    .coffeeguide .coffee {
+        width : 100%;   
+    }
+}
+@media only screen and (max-width : 480px){
+    #intro {
+        background: url(/image/small.jpg) no-repeat;
+        background-size: 101% auto;
+        background-position: 0 0;
+    }
+    #intro .wrapper{
+        width : 100%;
+    }
+    #intro .sns {
+        display: none;
+    }
+    #intro .contact {
+        padding-top: 50%;
+        width : 100%;
+        text-align: center;
+    }
+    #intro .business, #intro .phone {
+        float : none;
+    }
+    #intro .business, #intro .phone {
+        margin: 10px 0;
+        display: inline-block;
+        width : 100%;
+    }
+    #bg-small {
+        display: inline-block;
+        width : 100%;   
+        visibility: hidden;
+    }
+    #bg-middle {
+        display: none
+    }
+    #bg-big {
+        display: none;
+    }
+
+    #desktop-header {
+        display: none;   
+    }
+    #mobile-header {
+        display: block;   
+    }
+    #mobile-toggle {
+        display: inline-block; 
+        margin-right: 11px;
+    }
+    #mobile-menu {
+        display: block;
+        width : 100%;
+    }
+    #mobile-header {
+        clear : both;   
+    }
+    #mobile-header .wrapper {
+        text-align: center;
+        width : 100%;   
+    }
+    #mobile-header .logo {
+        float: none;
+    }
+    #mobile-header .cart {
+        margin-left: 11px;
+        position : absolute;
+        left : 0;
+    }
+    .ipad {
+        display : none;   
+    }
+    .mobile {
+        display : block;   
+    }
+    #aboutus {
+        width : 100%;   
+    }
+    #contact {
+        width : 100%; 
+    }
+    #sns {
+        width : 100%;   
+    }
+    
+    #content > .wrapper {
+        width : 100%;   
+    }
+    .footer > .wrapper {
+        width : 80%;   
+    }
+
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+/* iPhone 5 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* iPhone 6 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* iPhone 6+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* Samsung Galaxy S3 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* Samsung Galaxy S4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+/* Samsung Galaxy S5 ----------- */
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
