@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "BebasNeue";
+    font-weight: bold;
+    font-style : normal;
+    src: url('/beanbrothers/font/BebasNeue Bold.eot');
+    src: 
+        url("/beanbrothers/font/BebasNeue Bold.woff") format("woff"),
+        url("/beanbrothers/font/BebasNeue Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    font-weight : normal;
+    font-style : normal;
+  src: url('/beanbrothers/font/BebasNeue Regular.eot');
+  src: 
+    url("/beanbrothers/font/BebasNeue Regular.woff") format("woff"),
+    url("/beanbrothers/font/BebasNeue Regular.otf") format("opentype");
+    
+}
+
+@font-face {
+    font-family: "SeoulNamsan";
+    font-weight: lighter;
+    font-style : normal;
+    src: url('/beanbrothers/font/SeoulNamsanM.eot');
+    src: local("☺"),
+        url("/beanbrothers/font/SeoulNamsanM.woff") format("woff"),
+        url("/beanbrothers/font/SeoulNamsanM.otf") format("opentype");
+}
+@font-face {
+    font-family: "SeoulNamsan";
+    font-weight : normal;
+    font-style : normal;
+    src: url('/beanbrothers/font/SeoulNamsanL.eot');
+    src: local("☺"),    
+        url("/beanbrothers/font/SeoulNamsanL.woff") format("woff"),
+        url("/beanbrothers/font/SeoulNamsanL.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "NanumBarunGothic";
+    font-weight : normal;
+    font-style : normal;
+    src: url('/beanbrothers/font/NanumBarunGothic.eot');
+    src: local("☺"),    
+        url("/beanbrothers/font/NanumBarunGothic.woff") format("woff"),
+        url("/beanbrothers/font/NanumBarunGothic.otf") format("opentype");
+}
+@font-face {
+    font-family: "NanumBarunGothic";
+    font-weight: bold;
+    font-style : normal;
+    src: url('/beanbrothers/font/NanumBarunGothicBold.eot');
+    src: local("☺"),    
+        url("/beanbrothers/font/NanumBarunGothicBold.woff") format("woff"),
+        url("/beanbrothers/font/NanumBarunGothicBold.otf") format("opentype");
+}

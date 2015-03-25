@@ -1,27 +1,7 @@
-@font-face {
-    font-family: "BebasNeue";
-    font-weight: bold;
-    src: url('/beanbrothers/font/BebasNeue Bold.eot');
-    src: 
-        url("/beanbrothers/font/BebasNeue Bold.woff") format("woff"),
-        url("/beanbrothers/font/BebasNeue Bold.otf") format("opentype");
-}
-
-@font-face {
-    font-family: "BebasNeue";
-    font-weight : normal;
-  src: url('/beanbrothers/font/BebasNeue Regular.eot');
-  src: 
-    url("/beanbrothers/font/BebasNeue Regular.woff") format("woff"),
-    url("/beanbrothers/font/BebasNeue Regular.otf") format("opentype");
-    
-}
-
-
 html, body {
-    font-size: 1.1em;
+    font-size: 1.0em;
     font-family:  "BebasNeue", sans-serif;
-    font-weight : bold;
+    font-weight : normal;
     position : absolute;
     width : 100%;
     height : 100%;
@@ -40,10 +20,10 @@ html, body {
     z-index: 11;
 }
 #intro {
-
+    overflow: hidden;
     background: url(/beanbrothers/image/big.jpg) no-repeat;
-    background-size: 101% auto;
-    background-position: 0 40%;
+    background-size: 101%;
+    background-position: 0 -140px;
     position: relative;
 
     width : 100%;
@@ -71,8 +51,8 @@ html, body {
 
 }
 #intro .sns {
-    padding-top: 50px;
-    position: relative;
+    padding-top: 20%;
+    position: absolute;
     width : 100%;
     height : 40px;
 }
@@ -116,7 +96,7 @@ html, body {
     width : 100%;
     height : 20%;
     
-    font-size: 0.9em;
+    font-size: 1.0em;
 }
 #intro .contact *{
     color : white;
@@ -152,6 +132,7 @@ html, body {
     opacity: 1; 
 }
 #desktop-header {
+    font-size : 1.1em;
     width : 100%;
     position: absolute;
     bottom: 0;
@@ -167,7 +148,7 @@ html, body {
     position: relative;
 }
 #desktop-header.fade {
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.5);
 }
 #desktop-header.fade * {
     color : white;   
@@ -179,7 +160,7 @@ html, body {
     bottom : auto;
     background-color: rgba(0,0,0,0.9);
 }
-#desktop-header.fade * {
+#desktop-header.fixed * {
     color : white;   
 }
 
@@ -200,16 +181,16 @@ html, body {
 #right-nav{
     border-left: 1px solid white;
 }
-.major-menu {
+#left-nav .major-menu {
     display: inline-block;
     float: left;
-    margin-right: 80px;
+    margin-right: 60px;
 }
 
-.minor-menu {
+#right-nav .minor-menu {
     display: inline-block;
     float: right;
-    margin-left: 80px;
+    margin-left: 60px;
 }
 
 #mobile-nav-trigger {
@@ -318,6 +299,8 @@ html, body {
     background-image: url('/beanbrothers/image/BEANBROTHERS_white.png');
 }
 #mobile-menu {
+    font-size : 1.0em;
+    
     z-index: 21;
     position: fixed;
     top:0;
@@ -335,14 +318,60 @@ html, body {
     background: radial-gradient(circle, rgba(0,0,0,0.5) , #000); 
     text-align: center;
 }
+#mobile-menu > .wrapper {
+    width : 100%;
+    height : 100%;
+    position: absolute;
+    top : 0;
+}
+
+#mobile-menu > .wrapper:before {
+    content : " ";
+    font : 0/0 a;
+    height : 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+#mobile-menu .major-menu {
+    font-size : 3.0em;   
+    overflow-x: hidden;
+    
+    display: inline-block;
+    vertical-align: middle;
+    
+    width : 80%;
+    text-align: center;
+}
+#mobile-menu .minor-menu {
+    position: absolute;
+    left : 0;
+    right : 0;
+    bottom : 0;
+    padding-bottom: 30px;
+    width : 216px;
+    margin: 0 auto;
+    font-size : 1.0em;
+}
+#mobile-menu .login {
+    display: inline-block;
+    float : right;
+    font-size : 29px;
+}
+#mobile-menu .sns_a {
+    display: inline-block;
+    margin-right: 20px;
+    float : left;
+}
 #mobile-menu * {
     color : white;   
-    font-size : 1.3em;
 }
 #sublogo {
     z-index: 22;
-    margin-top: 50px;
-    display: inline-block;
+
+    position : absolute;
+    top : 0; left : 0; right : 0;
+    margin : 50px auto 0 auto;
+    display: block;
     height : 12px;
     width : 180px;
     
@@ -353,19 +382,11 @@ html, body {
             transition: all 0.5s ease;
     
     background-repeat: no-repeat;
-    background-image: url('/image/sublogo.png');
+    background-image: url('/beanbrothers/image/sublogo.png');
     background-size: contain;
 
 }
-#mobile-menu > .wrapper {
-    overflow-x: hidden;
-    
-    max-height: 100%;
-    max-width: 100%;
-    width : 100%;
-    margin-top: 20%;
-    text-align: center;
-}
+
 
 #mobile-nav-trigger:checked ~ #mobile-menu {
     visibility: visible;
@@ -374,16 +395,17 @@ html, body {
 footer {
     background-color: white;
     width : 100%;   
-    font-size: 1.1em;
+    font-size: 1.0em;
     padding-top: 100px;
 }
 footer h1 {
-    font-size : 1.6em;   
+    font-size : 1.3em;   
 }
 footer ul {
     margin : 20px 0;   
 }
 footer li {
+    font-size : 0.9em;
     padding: 5px 0;   
 }
 #sns ul li {
@@ -426,6 +448,7 @@ footer .icon {
 }
 
 #legal {
+    font-size : 0.7em;
     float : left;
     width : 100%;
     margin-top: 80px;
@@ -436,9 +459,11 @@ footer .icon {
 #content {
     width : 100%;
     z-index: 10;
+    padding-top : 68px;
     background-color: black;
 }
 .section {
+    overflow: hidden;
     position: relative;
     width : 100%;
     max-height: 100%;
@@ -473,7 +498,7 @@ footer .icon {
     width : 100%;
 }
 .notice h1 {
-    font-size : 1.3em;
+    font-size : 1.5em;
 }
 .notice h2 {
     font-size: 1.2em;
@@ -528,27 +553,184 @@ footer .icon {
     margin-bottom: 5px;
         
 }
+
+
 .coffeeguide {
-    background-color: white;   
+    clear : both;
+    background-color: black;   
+    line-height: 0;
+    width : 100%;
 }
-.coffeeguide .wrapper {
-    padding: 100px 0;
-    width : 87%;
-    margin: 0 auto;
+.coffeeguide .section-bg{
+    width : 101%;   
+}
+.coffeeguide > .wrapper {
+    line-height: 1.0em;
+    position: absolute;
+    top : 0;
+    padding: 0;
+    width : 100%;
+    height : 100%;
     overflow: hidden;
 }
-.coffeeguide .coffee {
+.coffeeguide > .wrapper > .coffee{
     float: left;
     display: block;
-    width : 33%;   
+    width : 25%;   
     text-align: center;
-}
-.coffeeguide .coffee img {
-       
-}
-.guide {
+    position : relative;
     
+    height : 100%;
+    opacity: 0;
+
+}
+
+.coffeeguide .wrapper > .coffee.hover:hover:before, .coffee-hover-effect:before{
+    opacity: 0;
+}
+
+.coffeeguide .wrapper > .coffee.hover:before{
+    content : " ";
+    font : 0/0 a;
+    
+    opacity : 0.7;
+
+    width : 100%;
+    height : 100%;
+    background-color: black;
+    
+    position : absolute;
+    top : 0; left : 0; right : 0; bottom : 0;
+    
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+    
+}
+.coffeeguide .coffee-logo {
+    width : 80%;   
+    margin: 0 auto;
+    padding-top : 40%;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+.coffeeguide .coffee.hover:hover > .coffee-logo,
+.coffee-hover-effect > .coffee-logo{
+    padding-top: 10%;
+}
+
+.coffeeguide .script {
+    line-height: 1.0em;
+    visibility: hidden;
+    position : absolute;
+    top : 0; right : 0; bottom : 0;
+    width : 25%;
+    height : 100%;
+    
+}
+.coffeeguide .script-main {
+    opacity : 0.7;
+    visibility: visible;
+
+    width : 25%;
+    height : 100%;
+    background-color: black;
+    
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+.coffeeguide .script.script-main > .wrapper {
+/*
+    font: 1.0em NanumBarunGothic;
+*/
+
+    width : 80%;
+    height : 70%;
+    background-color: white;
+    color : #111;   
+}
+.coffeeguide .coffee.hover:hover ~ .script-main, 
+.coffee-hover-effect ~ .script-main{
+    opacity: 0;   
+    visibility: hidden;
+}
+
+.coffeeguide .script > .wrapper {
+    width : 80%;
+    height : 80%;
+    position : absolute;
+    margin : auto;
+    top : 0; left : 0; right : 0; bottom : 0;
+    background-color: black;
+    color : #aaa;
+    opacity: 0.8;
+
+}
+
+.coffeeguide .coffee.bk.hover:hover ~ .script-bk,
+.bk.coffee-hover-effect ~ .script-bk,
+.coffeeguide .coffee.vecky.hover:hover ~ .script-vecky, 
+.vecky.coffee-hover-effect ~ .script-vecky,
+.coffeeguide .coffee.patrick.hover:hover ~ .script-patrick,
+.patrick.coffee-hover-effect ~ .script-patrick {
+    visibility: visible;
+}
+.coffeeguide .coffee-logo > img {
+    width : 100%;
+}
+
+
+.guide {
+    width : 100%;
+    max-width: 100%;
+    overflow: hidden;
+    height : 500px;
+    position : relative;
+    background-color: white;
 }   
+.guide > .wrapper {
+    width : 100%;
+    height: 100%;
+}
+.guide > .wrapper > .article {
+
+}
+.guide > .wrapper > .article1 {
+    background-image: url(/beanbrothers/image/coffee_theater.jpg);
+    background-size : cover;
+}
+.guide > .wrapper > .article2 {
+    background-image: url(/beanbrothers/image/bitter_sweet.jpg);
+    background-size: cover;
+}
+.guide .prev {
+    
+}
+.guide .now {
+    background-color: brown;
+    position : absolute;
+    margin : auto;
+    top: 0; bottom : 0; left : 0; right : 0;
+    width : 40%;
+    padding-top: 40%;
+    height : 0;
+}
+.guide .next {
+    background-color: firebrick;
+    position : absolute;
+    margin : auto 0;
+    top: 0; bottom : 0; 
+    right : -17.5%;
+    
+    width : 35%;
+    padding-top: 35%;
+    height : 0;
+}
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 /* Styles */
@@ -598,10 +780,10 @@ iPad 3
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
 /* Styles */
 }
-@media only screen and (max-width : 1027px){
+@media only screen and (min-width : 1280px){
     #intro {
         background: url(/beanbrothers/image/big.jpg) no-repeat;
-        background-position: 0% 60%;
+        background-position: 0% -200px;
         background-size: cover;
     }
     #bg-small {
@@ -618,6 +800,7 @@ iPad 3
 
     #desktop-header {
         display: block;   
+        font-size : 1.4em;
     }
     #mobile-toggle {
         display: none;   
@@ -626,7 +809,7 @@ iPad 3
         display: none;
     }
 }
-@media only screen and (max-width : 960px){
+@media only screen and (max-width : 1029px){
     #intro {
         background: url(/beanbrothers/image/middle.jpg) no-repeat;
         background-size: 101% auto;
@@ -636,9 +819,14 @@ iPad 3
         width : 80%;   
     }
     #intro .contact {
-        margin-top: 40%;
+        margin-top: 60%;
         width : 90%;
         font-size : 1.1em;
+        padding: 0;
+    }
+    #intro .sns {
+        margin-top : 60%;
+        padding-top: 50px;
     }
     #intro .business, #intro .phone {
         float : left;
@@ -698,18 +886,91 @@ iPad 3
         margin-right: 50px;
     }
     #sns, #contact, #aboutus {
-        margin-right: 60px;
+        margin-right: 80px;
     }
 
     #content {
         padding-top : 48px;
     }
-
-    .coffeeguide .coffee {
-        width : 100%;   
+    .coffeeguide {
+        overflow: visible;
+        max-height: none;
+        background-color: white;
     }
+    .coffeeguide > .wrapper{
+        overflow: visible;   
+        height: auto;
+        position: relative;
+    }
+    .coffeeguide .section-bg {
+        visibility: hidden;  
+        position: absolute;
+        display: none;
+    }
+    .coffeeguide .coffee, .coffeeguide .script {
+        display: inline-block;
+        background-color: white;
+        opacity: 1;
+        width : 100%;   
+        position : relative;
+        visibility: visible;
+    }
+    .coffeeguide .script-main {
+        height : 400px;
+
+
+    }
+    .coffeeguide .script-main > .wrapper {
+
+        
+    }
+    .coffeeguide > .wrapper > .coffee{
+        float : none;
+        height : 500px;  
+        width : 100%;
+    }
+    .coffeeguide > .wrapper > .coffee .coffee-logo{
+        width : auto;
+        height : 70%;
+        padding : 0;
+    }
+    .coffeeguide > .wrapper > .coffee .coffee-logo > img{
+        width : auto;
+        height : 100%;
+        
+    }
+    .coffeeguide .script {
+        min-height : 300px;
+        background-color: white;
+    }
+    .coffeeguide .script > .wrapper {
+        background-color: white;
+        color : black;
+    }
+    .coffeeguide .wrapper > .coffee.hover:before {
+        display: none;   
+    }
+    .coffeeguide .coffee.hover:hover ~ .script-main, 
+    .coffee-hover-effect ~ .script-main{
+        opacity: 1;   
+        visibility: visible;
+    }
+    .coffeeguide .coffee.bk.hover:hover ~ .script-bk,
+    .bk.coffee-hover-effect ~ .script-bk,
+    .coffeeguide .coffee.vecky.hover:hover ~ .script-vecky, 
+    .vecky.coffee-hover-effect ~ .script-vecky,
+    .coffeeguide .coffee.patrick.hover:hover ~ .script-patrick,
+    .patrick.coffee-hover-effect ~ .script-patrick {
+        visibility: visible;
+        opacity: 1;
+    }
+    .coffeeguide .coffee.hover:hover > .coffee-logo,
+    .coffee-hover-effect > .coffee-logo{
+        padding : 0;
+    }
+
 }
-@media only screen and (max-width : 480px){
+@media only screen and (max-width : 640px){
     #intro {
         background: url(/beanbrothers/image/small.jpg) no-repeat;
         background-size: 101% auto;

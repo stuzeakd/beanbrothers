@@ -1,15 +1,19 @@
 var contPadTop = 78; 
 $(window).load(function(){
     var dcubeMainImage = $('#dcubecity .main-img > img');
-    dcubeMainImage.css('margin-top', - dcubeMainImage.height() * 0.56);
+    dcubeMainImage.css('margin-top', - dcubeMainImage.height() * 0.61);
 });
+
 $(document).ready(function () {
     $(document).on("scroll", onScroll);
     
-    //smoothscroll
     $('a[href^="#"]').on('click', function (e) {
         e.preventDefault();
         $(document).off("scroll");
+        var content = $('#content');
+        var hapjeongWrapper = $('#hapjeong > .wrapper')
+        var contentPadTop = content.offset().top;
+        hapjeongWrapper.css('padding-top', 0);
         
         $('a').each(function () {
             $(this.parentElement).removeClass('cafe-active');
@@ -42,12 +46,12 @@ $(document).ready(function () {
         $('.animate').each(function(idx){
             if(!$(this).hasClass('animated') && scrollTop+contentPadTop > $(this).offset().top){
                 if($(this.parentElement).attr('id') === 'hapjeong'){
-                    $(this).animate({paddingTop : '0'}, 500, enable_scroll);
+                    $(this).animate({paddingTop : '0'}, 500, function(){setTimeout(enable_scroll, 450);});
                     disable_scroll();
                     $(this).removeClass('animate');
                 }
                 if($(this.parentElement).hasClass('main-img')){
-                    $(this).animate({'marginTop' : '0'}, 500);   
+                    $(this).animate({'marginTop' : '0'}, 300);   
                     $(this).removeClass('animate');
                 }
             }
@@ -57,7 +61,61 @@ $(document).ready(function () {
 });
 
 function onScroll(event){
-    var scrollPos = $(document).scrollTop();
+//    var services = $('#services').offset().top;
+//    var studio_start = $('#studio-img').offset().top;
+//    var studio_end = $('#studio-team').offset().top;
+//    var contact = $('#contact').offset().top;
+//    var bottom = $(window).height() - 1000;
+//
+//      
+//
+//    if ($(this).scrollTop() >= contact-70) {
+//        $("nav#menu").fadeOut();
+//    }
+//
+//    if ($(this).scrollTop() <= contact-70) {
+//        $("nav#menu").fadeIn();
+//    }
+//
+//    if ($(this).scrollTop() <= services - 70) {
+//        $(".white").css("color", "#fff");
+//        $(".menui").css("background", "#fff");
+//        $(".footer").css("display", "none");
+//    }
+//
+//    if(($(this).scrollTop() >= services - 70) && ($(this).scrollTop() <= studio_start - 70)){
+//        $(".white").css("color", "#000");
+//        $(".menui").css("background", "#000");
+//        $(".footer").css("display", "block");
+//    }
+//
+//    if (($(this).scrollTop() >= studio_start - 70) && ($(this).scrollTop() <= studio_end - 150)){
+//        $(".white").css("color", "#fff");
+//        $(".menui").css("background", "#fff");
+//        $(".footer").css("display", "block");
+//    }
+//
+//    if ($(this).scrollTop() >= studio_end - 150){
+//        $(".white").css("color", "#000");
+//        $(".menui").css("background", "#000");
+//        $(".footer").css("display", "block");
+//    }
+//
+//
+//    $("nav ul#menu-list li a").each(function(index, element) {
+//
+//        var id = $(element).attr('id');
+//        var href = $(element).attr('href');
+//
+//        if($(window).scrollTop()>=($(href).offset().top)-70) {
+//            $("nav ul#menu-list li a").removeClass("selected");
+//            $("#"+id).addClass("selected");
+//        }
+//    });
+    var scrollPos = $(document).scrollTop();  
+//    for(var i = $(this); i.parent().css('background-color'); i = i.parent()){
+//        console.log(i.parent().css('background-color'));   
+//    }
     $('#cafe-header a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
@@ -95,7 +153,12 @@ function keydown(e) {
 function wheel(e) {
   preventDefault(e);
 }
-
+function touchstart(e) {
+  preventDefault(e);   
+}
+function touchmove(e) {
+  preventDefault(e);   
+}
 function disable_scroll() {
   if (window.addEventListener) {
       window.addEventListener('DOMMouseScroll', wheel, false);
@@ -109,6 +172,7 @@ function enable_scroll() {
         window.removeEventListener('DOMMouseScroll', wheel, false);
     }
     window.onmousewheel = document.onmousewheel = document.onkeydown = null;  
+    
 }
 
 
