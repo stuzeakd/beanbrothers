@@ -17,13 +17,20 @@ $(window).ready(function($) {
     });
     var menu = $(".menu");
     menu.on("mouseenter mouseleave", function(e) {
-        menu.not(this).stop(!0).fadeTo(300, "mouseenter" == e.type ? .3 : 1)
+        menu.not(this).stop(!0).fadeTo(500, "mouseenter" == e.type ? .3 : 1)
     });
     
     $("#blackbg").delay(2e3).fadeOut(1e3);
     var s = $(window).height()-113, t = 10, o = 537, header = $(".header"), logo = $('.logo'); 
     
     $(window).scroll(function(){
+        if($(this).scrollTop() > $('.coffeeguide').offset().top){
+            
+            $('.header').removeClass('dark').addClass('bright');   
+        } else {
+            $('.header').removeClass('bright').addClass('dark');
+        }
+        
         if($(this).scrollTop() > $(window).height()-113 ){
             logo.addClass('show');
             if ($(window).width() > desktopWidth) {

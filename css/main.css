@@ -104,13 +104,12 @@ html, body {
 #intro .phone {
     margin-left: 30px;
     float : right;   
+    cursor : default;
 }
 #intro .business { 
     margin-left: 30px;
     float : right;
 }
-
-
 
 #bg-img {
     position: absolute;
@@ -138,11 +137,23 @@ html, body {
     bottom: 0;
     padding: 20px 0;
     z-index : 30;
+    color : white;
+}
+#desktop-header a {
+    color : white;   
 }
 #desktop-header > .logo {
     position: absolute;
     height: 40px;
     padding-bottom: 10px;
+}
+#desktop-header > .logo > a{
+    height : 40px;
+    width : 270px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url('/beanbrothers/image/BEANBROTHERS_white.png');
+    background-size: contain;  
 }
 #desktop-header > .logo.show {
     position: relative;
@@ -172,9 +183,19 @@ html, body {
     width : 78%;
     margin : 0 auto;
 }   
-#desktop-header *{
-    color : white;   
+#mobile-header.bright {
+    color : black;
 }
+#mobile-header.bright .wrapper .logo{
+    background-repeat: no-repeat;
+    background-image: url('/beanbrothers/image/BEANBROTHERS.png');
+    background-size: contain;  
+}
+#mobile-toggle.bright span, #mobile-toggle.bright span:before, #mobile-toggle.bright span:after{
+    background-color: black;   
+}
+
+
 #left-nav{
     
 }
@@ -565,7 +586,7 @@ footer .icon {
     width : 101%;   
 }
 .coffeeguide > .wrapper {
-    line-height: 1.0em;
+    line-height: normal;
     position: absolute;
     top : 0;
     padding: 0;
@@ -582,11 +603,10 @@ footer .icon {
     
     height : 100%;
     opacity: 0;
-
 }
 
 .coffeeguide .wrapper > .coffee.hover:hover:before, .coffee-hover-effect:before{
-    opacity: 0;
+    opacity: 0.4;
 }
 
 .coffeeguide .wrapper > .coffee.hover:before{
@@ -608,69 +628,259 @@ footer .icon {
             transition: all 0.5s ease;
     
 }
-.coffeeguide .coffee-logo {
-    width : 80%;   
+.coffeeguide .coffee > .wrapper {
+    position: relative;
+    width : 80%;
     margin: 0 auto;
-    padding-top : 40%;
+}
+.coffeeguide .coffee .coffee-logo {
+    position : absolute;
+    width : 100%;   
+    
+    left : 0; right : 0;
+    padding-top : 50%;
     -webkit-transition: all 0.5s ease;
        -moz-transition: all 0.5s ease;
          -o-transition: all 0.5s ease;
             transition: all 0.5s ease;
 }
-.coffeeguide .coffee.hover:hover > .coffee-logo,
-.coffee-hover-effect > .coffee-logo{
-    padding-top: 10%;
+.coffeeguide .coffee .coffee-logo img{
+    width : 100%;
+}
+.coffeeguide .coffee.hover:hover .coffee-logo,
+.coffee-hover-effect .coffee-logo{
+    padding-top: 30%;
+    opacity: 0.1;
+}
+.coffeeguide .coffee .bestwhen {
+    text-align: center;
+    width : 100%;
+    position : absolute; 
+    top : 0; 
+    padding-top : 63%;
+    visibility: hidden;
+    opacity: 0;
+    
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+.coffeeguide .coffee:hover .bestwhen,
+.coffee-hover-effect .bestwhen {
+    top : 0;
+    padding-top : 58%;
+    visibility: visible;
+    opacity: 1;
+}
+.coffeeguide .coffee.bk .bestwhen {
+    color : #C02E30;   
+}
+.coffeeguide .coffee.vecky .bestwhen {
+    color : #7CAC52;
+}
+.coffeeguide .coffee.patrick .bestwhen {
+    color : #1673A3;
 }
 
-.coffeeguide .script {
-    line-height: 1.0em;
+.coffeeguide .card {
+    vertical-align: bottom;
+    z-index: 11;
+    font : 1.0em NanumBarunGothic;
+    line-height: normal;
     visibility: hidden;
     position : absolute;
-    top : 0; right : 0; bottom : 0;
+    top : 0; right : 0; bottom : 0; 
     width : 25%;
     height : 100%;
     
 }
-.coffeeguide .script-main {
-    opacity : 0.7;
+.coffeeguide .card-main {
+    position : absolute;
     visibility: visible;
 
     width : 25%;
     height : 100%;
-    background-color: black;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 10;
     
     -webkit-transition: all 0.5s ease;
        -moz-transition: all 0.5s ease;
          -o-transition: all 0.5s ease;
             transition: all 0.5s ease;
 }
-.coffeeguide .script.script-main > .wrapper {
-/*
-    font: 1.0em NanumBarunGothic;
-*/
 
+.coffeeguide .card.card-main > .wrapper {
+    position: absolute;
+    margin : auto;
+    top : 0; right : 0; bottom : 0; left : 0;
     width : 80%;
-    height : 70%;
+    height : 80%;
     background-color: white;
     color : #111;   
 }
-.coffeeguide .coffee.hover:hover ~ .script-main, 
-.coffee-hover-effect ~ .script-main{
-    opacity: 0;   
-    visibility: hidden;
+
+.coffeeguide .card-main .info{
+    width : 100%;
+}
+.coffeeguide .card-main .info .name{
+    font-size : 1.2em;
+    
+    display: inline-block;
+    padding-left : 0;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
 }
 
-.coffeeguide .script > .wrapper {
+.coffeeguide .card-main .tag {
+    font-size : 0.7em;
+    position : absolute;
+    bottom :0;
+    margin : 0 5px 5% 5px;
+}
+.coffeeguide .coffee.hover:hover ~ .card-main, 
+.coffee-hover-effect ~ .card-main{
+    background-color: none;
+    opacity: 1;
+}
+.coffeeguide .coffee.hover:hover ~ .card-main .wrapper, 
+.coffee-hover-effect ~ .card-main .wrapper{
+    background-color: white;
+    opacity: 1;
+    padding : 0.5em;
+    -webkit-border-radius: 25px;
+       -moz-border-radius: 25px;
+            border-radius: 25px;
+}
+.coffeeguide .coffee.hover:hover ~ .card-main .info .name, 
+.coffee-hover-effect ~ .card-main .info .name{
+    padding-left : 50%;
+}
+
+.coffeeguide .card > .wrapper {
+    font-size : 1.0em;
     width : 80%;
     height : 80%;
     position : absolute;
     margin : auto;
     top : 0; left : 0; right : 0; bottom : 0;
-    background-color: black;
-    color : #aaa;
-    opacity: 0.8;
-
+    background-color: rgba(255,255,255,0.7);
+    color : #666;
+    padding : 0.5em;
+    -webkit-border-radius: 25px;
+       -moz-border-radius: 25px;
+            border-radius: 25px;
 }
+.coffeeguide .card > .wrapper > .info,
+.coffeeguide .card > .wrapper > .taste {
+    margin : 0.3em;
+}
+.coffeeguide .card > .wrapper > .info{
+    padding-top : 10%;   
+    display: inline-block;
+}
+.coffeeguide .card > .wrapper > .taste {
+    padding-top : 15%;   
+}
+
+.coffeeguide .en {
+    font-family : BebasNeue;   
+    font-size : 1.0em;
+}
+.coffeeguide .kr {
+    font-family : NanumBarunGothic; 
+    font-size: 0.8em;
+}
+.coffeeguide span {
+    line-height: 0;   
+}
+.coffeeguide .card > .wrapper h1 {
+    font-size : 1.3em;   
+    line-height: 1.0em;
+}
+.coffeeguide .card > .wrapper h3{
+    font-size : 1.1em;   
+    line-height : 1.3em;
+}
+.coffeeguide .card > .wrapper h4{
+    font-size : 1.0em;
+    line-height : 1.2em;
+}
+.coffeeguide .card > .wrapper h5{
+    font-size : 0.7em;
+    line-height : 1.4em;
+}
+.coffeeguide .card > .wrapper .line{
+    width : 20%;
+    border : 1px solid white;
+    display: block;
+    margin : 0.6em 0 0.7em 0;
+    line-height: 0;
+}
+.coffeeguide .card > .wrapper > .taste h1 {
+    color : #555;  
+}
+.coffeeguide .card-bk .name {
+    color : #C02E30;   
+}
+.coffeeguide .card-vecky .name {
+    color : #7CAC52;
+}
+.coffeeguide .card-patrick .name {
+    color : #1673A3;
+}
+
+.coffeeguide .coffee.bk.hover:hover ~ .card-bk,
+.bk.coffee-hover-effect ~ .card-bk,
+.coffeeguide .coffee.vecky.hover:hover ~ .card-vecky, 
+.vecky.coffee-hover-effect ~ .card-vecky,
+.coffeeguide .coffee.patrick.hover:hover ~ .card-patrick,
+.patrick.coffee-hover-effect ~ .card-patrick {
+    visibility: visible;
+}
+.coffeeguide .script .wrapper:before, .coffeeguide .script . wrapper:after {
+    position: absolute;
+    display: block;
+    font : 1.3em NanumBarunGothic;
+    color : white;
+}
+.coffeeguide .script .wrapper:before{
+    content : "“";
+    top : 0; left : -20px;
+}
+.coffeeguide .script .wrapper:after {
+    content : "”";
+    bottom : 0; right : -20px;
+}
+.coffeeguide .script {
+    pointer-events: none;
+    
+    line-height: normal;
+    visibility: hidden;
+    position : absolute;
+    left : 0;bottom : 0;
+    margin-bottom : 20%;
+    width : 75%;
+    height : auto;
+    z-index: 11;
+}
+.coffeeguide .script > .wrapper {
+    font : 0.8em NanumBarunGothic;
+    line-height: 1.5em;
+    width : 80%;
+    display: inline-block;
+    position : absolute;
+    text-align: center;
+    margin : 0 auto;
+    left : 0; right : 0;
+    color : white;
+}
+.coffeeguide .script > .wrapper p {
+    display: block;   
+}
+
 
 .coffeeguide .coffee.bk.hover:hover ~ .script-bk,
 .bk.coffee-hover-effect ~ .script-bk,
@@ -680,12 +890,11 @@ footer .icon {
 .patrick.coffee-hover-effect ~ .script-patrick {
     visibility: visible;
 }
-.coffeeguide .coffee-logo > img {
-    width : 100%;
-}
+
 
 
 .guide {
+    padding-top : 200px;
     width : 100%;
     max-width: 100%;
     overflow: hidden;
@@ -712,7 +921,6 @@ footer .icon {
     
 }
 .guide .now {
-    background-color: brown;
     position : absolute;
     margin : auto;
     top: 0; bottom : 0; left : 0; right : 0;
@@ -721,7 +929,6 @@ footer .icon {
     height : 0;
 }
 .guide .next {
-    background-color: firebrick;
     position : absolute;
     margin : auto 0;
     top: 0; bottom : 0; 
@@ -734,16 +941,6 @@ footer .icon {
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 /* Styles */
-    #intro {
-        background: url(/beanbrothers/image/small.jpg) no-repeat;
-        background-size: contain;
-    }
-    #desktop-header {
-        display: none;   
-    }
-    #mobile-header {
-        display: block;   
-    }
 }
 
 /* Smartphones (landscape) ----------- */
@@ -780,7 +977,7 @@ iPad 3
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
 /* Styles */
 }
-@media only screen and (min-width : 1280px){
+@media only screen and (min-width : 1824px){
     #intro {
         background: url(/beanbrothers/image/big.jpg) no-repeat;
         background-position: 0% -200px;
@@ -834,7 +1031,9 @@ iPad 3
         display: inline-block;
         width : 100%;
     }
-    
+    #intro .phone {
+        cursor : auto;
+    }
     #bg-small {
         display: none;
     }
@@ -901,59 +1100,258 @@ iPad 3
         overflow: visible;   
         height: auto;
         position: relative;
+        padding-top : 200px;
     }
     .coffeeguide .section-bg {
         visibility: hidden;  
         position: absolute;
         display: none;
     }
-    .coffeeguide .coffee, .coffeeguide .script {
+    .coffeeguide .coffee, 
+    .coffeeguide .card, 
+    .coffeeguide .script {
         display: inline-block;
-        background-color: white;
+        background-color: transparent;
         opacity: 1;
         width : 100%;   
         position : relative;
         visibility: visible;
     }
-    .coffeeguide .script-main {
-        height : 400px;
-
-
-    }
-    .coffeeguide .script-main > .wrapper {
-
-        
+    
+    .coffeeguide .card-main {
+        height : 200px;
     }
     .coffeeguide > .wrapper > .coffee{
         float : none;
-        height : 500px;  
+        height : 0;  
         width : 100%;
-    }
-    .coffeeguide > .wrapper > .coffee .coffee-logo{
-        width : auto;
-        height : 70%;
-        padding : 0;
+        padding-top : 100px;
     }
     .coffeeguide > .wrapper > .coffee .coffee-logo > img{
         width : auto;
-        height : 100%;
+        height : 100%;   
+    }
+    .coffeeguide .wrapper > .coffee:before{
+        content : "";
+        display: none;
+    }
+    .coffeeguide .coffee > .wrapper {
+        position: absolute;
+        width : 80%;
+        margin: 0 auto;
+        left : 0; right : 0;
+        margin-top : 200px;
+        padding-top : 10%;
+    }
+    .coffeeguide .coffee .coffee-logo {
+        position : relative;
+        width : 40%;   
         
+        left : auto; right : auto;
+        padding-top : 0;
+        
+        opacity: 0.5;
+        float : left;
+        padding-left: 10%;
+
     }
-    .coffeeguide .script {
-        min-height : 300px;
-        background-color: white;
+    .coffeeguide .coffee.hover:hover .coffee-logo,
+    .coffee-hover-effect .coffee-logo{
+        padding-top: 0;
+        opacity: 1;
     }
-    .coffeeguide .script > .wrapper {
-        background-color: white;
-        color : black;
+    .coffeeguide .coffee .bestwhen {
+        text-align: center;
+        
+        padding-left: 10%;
+        width : 40%;
+        height : 100%;
+        position : relative; 
+        top : auto; 
+        padding-top: 0;
+        visibility: visible;
+        opacity: 1;
+        
+        
+        float : left;
+    }
+    .coffeeguide .coffee:hover .bestwhen,
+    .coffee-hover-effect .bestwhen {
+        top : auto;
+        padding-top : 0;
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    
+    .coffeeguide .coffee.bk .bestwhen {
+        color : #C02E30;   
+    }
+    .coffeeguide .coffee.vecky .bestwhen {
+        color : #7CAC52;
+    }
+    .coffeeguide .coffee.patrick .bestwhen {
+        color : #1673A3;
+    }
+    .coffeeguide .coffee .bestwhen h1{
+        font-size : 1.3em;
+        margin-bottom: 0.7em;
+    }
+    .coffeeguide .coffee .bestwhen h2{
+        font-size : 0.9em;
+
+    }
+    .coffeeguide .card {
+        vertical-align: bottom;
+        line-height: normal;
+        visibility: visible;
+        position : relative;
+        background-color : transparent;
+        top : 0; right : 0; bottom : 0; 
+        width : 100%;
+    }
+    .coffeeguide .card-main {
+        position : absolute;
+        visibility: visible;
+        top : 0;
+        width : 100%;
+        height : 200px;
+        background-color : transparent;
+        z-index:auto;
+
+        -webkit-transition: all 0.5s ease;
+           -moz-transition: all 0.5s ease;
+             -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+    }
+
+    .coffeeguide .card.card-main > .wrapper {
+        position: absolute;
+        margin : auto;
+        background-color : transparent;
+        top : 0; right : 0; bottom : 0; left : 0;
+        width : 80%;
+        height : 80%;
+        color : #111;   
+    }
+
+    .coffeeguide .card-main .info{
+        width : 100%;
+        position: relative;
+    }
+    .coffeeguide .card-main .info .name{
+        font-size : 1.2em;
+
+        display: inline-block;
+        
+        padding-left : 0;
+    }
+
+    .coffeeguide .card-main .tag {
+        font-size : 0.7em;
+        position : relative;
+        bottom :0;
+        margin : 0;
+    }
+    
+    .coffeeguide .coffee.hover:hover ~ .card-main, 
+    .coffee-hover-effect ~ .card-main{
+        background-color : transparent;
+        opacity: 1;
+    }
+    .coffeeguide .coffee.hover:hover ~ .card-main .wrapper, 
+    .coffee-hover-effect ~ .card-main .wrapper{
+        background-color : transparent;
+        opacity: 1;
+        padding : 0;
+        -webkit-border-radius: 0;
+           -moz-border-radius: 0;
+                border-radius: 0;
+    }
+    .coffeeguide .coffee.hover:hover ~ .card-main .info .name, 
+    .coffee-hover-effect ~ .card-main .info .name{
+        padding-left : 0;
+    }
+
+    .coffeeguide .card > .wrapper {
+        font-size : 1.0em;
+        width : 80%;
+        height : 80%;
+        position : relative;
+        margin : auto;
+        top : 0; left : 0; right : 0; bottom : 0;
+        background-color : transparent;
+        color : #666;
+        padding : 0.5em;
+        -webkit-border-radius: 0;
+           -moz-border-radius: 0;
+                border-radius: 0;
+    }
+    .coffeeguide .card > .wrapper > .info,
+    .coffeeguide .card > .wrapper > .taste {
+        margin : 0;
+    }
+    .coffeeguide .card > .wrapper > .info{
+        padding-top : 10%;   
+        display: inline-block;
+    }
+    .coffeeguide .card > .wrapper > .taste {
+        padding-top : 15%;   
+    }
+    .coffeeguide span {
+        line-height: 0;   
+    }
+    .coffeeguide .card > .wrapper h1 {
+        font-size : 1.6em;   
+        line-height: 1.0em;
+    }
+    .coffeeguide .card > .wrapper h3{
+        font-size : 1.1em;   
+        line-height : 1.3em;
+    }
+    .coffeeguide .card > .wrapper h4{
+        font-size : 1.0em;
+        line-height : 1.2em;
+    }
+    .coffeeguide .card > .wrapper h5{
+        font-size : 0.9em;
+        line-height : 1.4em;
+    }
+    .coffeeguide .card > .wrapper .line{
+        width : 20%;
+        border : 1px solid black;
+        display: block;
+        margin : 0.6em 0 0.7em 0;
+        line-height: 0;
+    }
+    .coffeeguide .card > .wrapper > .taste h1 {
+        color : #555;  
+    }
+    .coffeeguide .card-bk .name {
+        color : #C02E30;   
+    }
+    .coffeeguide .card-vecky .name {
+        color : #7CAC52;
+    }
+    .coffeeguide .card-patrick .name {
+        color : #1673A3;
     }
     .coffeeguide .wrapper > .coffee.hover:before {
         display: none;   
     }
-    .coffeeguide .coffee.hover:hover ~ .script-main, 
-    .coffee-hover-effect ~ .script-main{
+    .coffeeguide .coffee.hover:hover ~ .card-main, 
+    .coffee-hover-effect ~ .card-main{
         opacity: 1;   
         visibility: visible;
+    }
+    .coffeeguide .coffee.bk.hover:hover ~ .card-bk,
+    .bk.coffee-hover-effect ~ .card-bk,
+    .coffeeguide .coffee.vecky.hover:hover ~ .card-vecky, 
+    .vecky.coffee-hover-effect ~ .card-vecky,
+    .coffeeguide .coffee.patrick.hover:hover ~ .card-patrick,
+    .patrick.coffee-hover-effect ~ .card-patrick {
+        visibility: visible;
+        opacity: 1;
     }
     .coffeeguide .coffee.bk.hover:hover ~ .script-bk,
     .bk.coffee-hover-effect ~ .script-bk,
@@ -964,11 +1362,91 @@ iPad 3
         visibility: visible;
         opacity: 1;
     }
+    
     .coffeeguide .coffee.hover:hover > .coffee-logo,
     .coffee-hover-effect > .coffee-logo{
         padding : 0;
     }
+    .coffeeguide .script .wrapper:before, 
+    .coffeeguide .script .wrapper:after {
+        position: absolute;
+        display: block;
+        font : 3.0em NanumBarunGothic;
+        color : black;
+        left : 0; right : 0;
+    }
+    .coffeeguide .script .wrapper:before{
+        content : "“";
+        top : -0.65em;
+    }
+    .coffeeguide .script .wrapper:after {
+        content : "”";
+        bottom : -1.3em;
+    }
+    .coffeeguide .script-bk .wrapper:before, 
+    .coffeeguide .script-bk .wrapper:after {
+        color : #C02E30; 
+    }
+    .coffeeguide .script-vecky .wrapper:before,
+    .coffeeguide .script-vecky .wrapper:after {
+        color : #7CAC52;
+    }
+    .coffeeguide .script-patrick .wrapper:before,
+    .coffeeguide .script-patrick .wrapper:after {
+        color : #1673A3;
+    }
 
+    .coffeeguide .script {
+        font-size : 1.0em;
+
+        line-height: normal;
+        visibility: visible;
+        position : relative;
+        left : auto; bottom : auto;
+        margin-bottom : 0;
+        width : 100%;
+        height : 200px;
+        min-height : 200px;
+        z-index: 11;
+        line-height: 1.0em;
+        
+        text-align: center;
+    }   
+    .coffeeguide .script:before {
+       
+        display: inline-block;
+        height : 100%;
+        content: "";
+        vertical-align: middle;
+    }
+    .coffeeguide .script > .wrapper {
+        height: auto;
+        font : 0.8em NanumBarunGothic;
+        line-height: 1.5em;
+        width : 80%;
+        display: inline-block;
+        position : relative;
+        text-align: center;
+        margin : 0 auto;
+        left : 0; right : 0;
+        color : black;
+        
+        vertical-align: middle;
+    }
+    .coffeeguide .script > .wrapper p {
+        position: static;
+        display: block;   
+    }
+
+
+    .coffeeguide .coffee.bk.hover:hover ~ .script-bk,
+    .bk.coffee-hover-effect ~ .script-bk,
+    .coffeeguide .coffee.vecky.hover:hover ~ .script-vecky, 
+    .vecky.coffee-hover-effect ~ .script-vecky,
+    .coffeeguide .coffee.patrick.hover:hover ~ .script-patrick,
+    .patrick.coffee-hover-effect ~ .script-patrick {
+        visibility: visible;
+    }
 }
 @media only screen and (max-width : 640px){
     #intro {
@@ -1058,8 +1536,96 @@ iPad 3
     .footer > .wrapper {
         width : 80%;   
     }
+    .guide .prev {
+
+    }
+    .coffeeguide > .wrapper {
+        padding-top : 50px;   
+    }
+    .coffeeguide .wrapper > .coffee {
+        display: inline-block;
+    }   
+    .coffeeguide .coffee > .wrapper {
+        padding-top : 0;
+        margin-top: 0;
+        position : relative;
+        height : auto;
+    }
+    .coffeeguide .coffee .coffee-logo,
+    .coffeeguide .coffee .bestwhen{
+        width : 100%;
+        float : none;
+        margin: 0;
+        padding: 0;
+    }
+    .coffeeguide .coffee .bestwhen{
+        margin-top : 40px;
+    }
+    .coffeeguide .script {
+        font-size : 0.7em;   
+        min-height: 250px;
+    }
+    .coffeeguide .script > .wrapper {
+        width : 90%;   
+    }
+    .coffeeguide .card > .wrapper h1 {
+        font-size : 1.3em;   
+        line-height: 1.0em;
+    }
+    .coffeeguide .card > .wrapper h3{
+        font-size : 1.1em;   
+        line-height : 1.3em;
+    }
+    .coffeeguide .card > .wrapper h4{
+        font-size : 1.0em;
+        line-height : 1.2em;
+    }
+    .coffeeguide .card > .wrapper h5{
+        font-size : 0.7em;
+        line-height : 1.4em;
+    }
+    .coffeeguide .card > .wrapper .line{
+        width : 20%;
+        border : 1px solid black;
+        display: block;
+        margin : 0.6em 0 0.7em 0;
+        line-height: 0;
+    }
+    .guide .now {
+        position : absolute;
+        margin : auto;
+        top: 0; bottom : 0; left : 0; right : 0;
+        width : 65%;
+        padding-top: 65%;
+        height : 0;
+    }
+    .guide .next {
+        position : absolute;
+        margin : auto 0;
+        top: 0; bottom : 0; 
+        right : -45%;
+
+        width : 55%;
+        padding-top: 55%;
+        height : 0;
+    }
 
 }
+@media only screen and (max-width : 680px) and (orientation : landscape){
+    #intro-container {
+        overflow : auto;
+        max-height : none;
+    }
+    #intro {
+        overflow: auto;
+    }
+}
+
+
+
+
+
+
 /* Desktops and laptops ----------- */
 @media only screen  and (min-width : 1224px) {
 /* Styles */
