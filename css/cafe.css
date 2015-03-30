@@ -103,6 +103,7 @@
 }
 .cafe .imageslider {
     overflow: hidden;
+    clear : both;
 }
 .cafe .imageslider img{
     position: relative;
@@ -260,6 +261,10 @@
     }
     #backtotop .wrapper {
         padding : 0;
+    }
+    
+    .script {
+        margin : auto 10px;
     }
 
 }

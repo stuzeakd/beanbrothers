@@ -51,8 +51,10 @@ html, body {
 
 }
 #intro .sns {
+    clear: both;
     padding-top: 20%;
     position: absolute;
+    top : 0;
     width : 100%;
     height : 40px;
 }
@@ -336,7 +338,7 @@ html, body {
             transition: all 0.5s linear;
     visibility: hidden;
     opacity: 0;
-    background: radial-gradient(circle, rgba(0,0,0,0.5) , #000); 
+    background: radial-gradient(circle, rgba(0,0,0,0.9) , #000); 
     text-align: center;
 }
 #mobile-menu > .wrapper {
@@ -477,7 +479,9 @@ footer .icon {
     border-top : 1px solid #aaa;
 }
 
+
 #content {
+    font-size : 1.0em;
     width : 100%;
     z-index: 10;
     padding-top : 68px;
@@ -894,17 +898,31 @@ footer .icon {
 
 
 .guide {
-    padding-top : 200px;
+    font-family: "BebasNeue", sans-serif;
+    font-size : 1.0em;
+    padding-top : 120px;
     width : 100%;
     max-width: 100%;
-    overflow: hidden;
-    height : 500px;
+    overflow-x: hidden;
+    height : auto;
+    min-height : 500px;
     position : relative;
     background-color: white;
 }   
+.guide > .guide-header {
+    font-size : 1.7em;  
+    margin: 0 auto;
+    width : 80%;
+    padding : 1.5em 0; 
+    border-top : 2px solid #555;
+    position: relative;
+}
 .guide > .wrapper {
+    position : relative;
+    font-family: "NanumBarunGothic", sans-serif;
+    font-size : 0.9em;
     width : 100%;
-    height: 100%;
+    min-height : 480px;
 }
 .guide > .wrapper > .article {
 
@@ -916,6 +934,19 @@ footer .icon {
 .guide > .wrapper > .article2 {
     background-image: url(/beanbrothers/image/bitter_sweet.jpg);
     background-size: cover;
+}
+.guide > .wrapper > .article > .wrapper {
+    position: absolute;
+    top : 0; right : 0; left : 0; bottom : 0;
+    margin: auto;
+    width : 80%;
+    height : 80%;
+}
+.guide > .wrapper > .article h1 {
+    font-size : 1.2em;
+}
+.guide > .wrapper > .article h2 {
+    font-size : 0.7em;
 }
 .guide .prev {
     
@@ -1158,7 +1189,7 @@ iPad 3
     .coffeeguide .coffee.hover:hover .coffee-logo,
     .coffee-hover-effect .coffee-logo{
         padding-top: 0;
-        opacity: 1;
+        opacity: 0.5;
     }
     .coffeeguide .coffee .bestwhen {
         text-align: center;
@@ -1447,6 +1478,9 @@ iPad 3
     .patrick.coffee-hover-effect ~ .script-patrick {
         visibility: visible;
     }
+    .guide > .wrapper {
+        font-size : 0.8em;   
+    }
 }
 @media only screen and (max-width : 640px){
     #intro {
@@ -1553,10 +1587,16 @@ iPad 3
     }
     .coffeeguide .coffee .coffee-logo,
     .coffeeguide .coffee .bestwhen{
+        opacity: 1;
         width : 100%;
         float : none;
         margin: 0;
         padding: 0;
+    }
+    .coffeeguide .coffee.hover:hover .coffee-logo,
+    .coffee-hover-effect .coffee-logo{
+        padding-top: 0;
+        opacity: 1;
     }
     .coffeeguide .coffee .bestwhen{
         margin-top : 40px;
@@ -1590,6 +1630,13 @@ iPad 3
         display: block;
         margin : 0.6em 0 0.7em 0;
         line-height: 0;
+    }
+    .guide > .wrapper {
+        position : relative;
+        font-family: "NanumBarunGothic", sans-serif;
+        font-size : 0.9em;
+        width : 100%;
+        min-height : 400px;
     }
     .guide .now {
         position : absolute;
