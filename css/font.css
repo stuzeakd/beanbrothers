@@ -18,26 +18,6 @@
     url("/beanbrothers/font/BebasNeue Regular.otf") format("opentype");
     
 }
-
-@font-face {
-    font-family: "SeoulNamsan";
-    font-weight: lighter;
-    font-style : normal;
-    src: url('/beanbrothers/font/SeoulNamsanM.eot');
-    src: local("☺"),
-        url("/beanbrothers/font/SeoulNamsanM.woff") format("woff"),
-        url("/beanbrothers/font/SeoulNamsanM.otf") format("opentype");
-}
-@font-face {
-    font-family: "SeoulNamsan";
-    font-weight : normal;
-    font-style : normal;
-    src: url('/beanbrothers/font/SeoulNamsanL.eot');
-    src: local("☺"),    
-        url("/beanbrothers/font/SeoulNamsanL.woff") format("woff"),
-        url("/beanbrothers/font/SeoulNamsanL.otf") format("opentype");
-}
-
 @font-face {
     font-family: "NanumBarunGothic";
     font-weight : normal;

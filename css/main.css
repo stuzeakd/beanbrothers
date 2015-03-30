@@ -1578,6 +1578,8 @@ iPad 3
     }
     .coffeeguide .wrapper > .coffee {
         display: inline-block;
+        position: relative;
+        height : auto;
     }   
     .coffeeguide .coffee > .wrapper {
         padding-top : 0;
