@@ -94,7 +94,7 @@ html, body {
     position: relative;
     line-height: normal;
     margin : 37% auto 0 auto;
-    padding-top: 3%;
+    padding-top: 6%;
     width : 100%;
     height : 20%;
     
@@ -338,7 +338,7 @@ html, body {
             transition: all 0.5s linear;
     visibility: hidden;
     opacity: 0;
-    background: radial-gradient(circle, rgba(0,0,0,0.9) , #000); 
+    background: radial-gradient(circle, rgba(0,0,0,0.9) 10%, #000 70%); 
     text-align: center;
 }
 #mobile-menu > .wrapper {
@@ -413,7 +413,7 @@ html, body {
 
 #mobile-nav-trigger:checked ~ #mobile-menu {
     visibility: visible;
-    opacity: 0.9; 
+    opacity: 0.95; 
 }
 footer {
     background-color: white;
@@ -581,6 +581,7 @@ footer .icon {
 
 
 .coffeeguide {
+    font-size: 1.0em;
     clear : both;
     background-color: black;   
     line-height: 0;
@@ -922,7 +923,6 @@ footer .icon {
     font-family: "NanumBarunGothic", sans-serif;
     font-size : 0.9em;
     width : 100%;
-    min-height : 480px;
 }
 .guide > .wrapper > .article {
 
@@ -952,9 +952,8 @@ footer .icon {
     
 }
 .guide .now {
-    position : absolute;
+    position : relative;
     margin : auto;
-    top: 0; bottom : 0; left : 0; right : 0;
     width : 40%;
     padding-top: 40%;
     height : 0;
@@ -1014,6 +1013,9 @@ iPad 3
         background-position: 0% -200px;
         background-size: cover;
     }
+    #intro .contact {
+        font-size: 1.3em;
+    }
     #bg-small {
         display: none;
     }
@@ -1025,7 +1027,12 @@ iPad 3
         width : 100%;   
         visibility: hidden;
     }
-
+    .coffeeguide {
+        font-size: 1.5em;
+    }
+    .guide .wrapper{
+        font-size: 1.2em;
+    }
     #desktop-header {
         display: block;   
         font-size : 1.4em;
@@ -1036,6 +1043,7 @@ iPad 3
     #mobile-menu {
         display: none;
     }
+    
 }
 @media only screen and (max-width : 1029px){
     #intro {
@@ -1501,8 +1509,6 @@ iPad 3
     }
     #intro .business, #intro .phone {
         float : none;
-    }
-    #intro .business, #intro .phone {
         margin: 10px 0;
         display: inline-block;
         width : 100%;
@@ -1638,7 +1644,6 @@ iPad 3
         font-family: "NanumBarunGothic", sans-serif;
         font-size : 0.9em;
         width : 100%;
-        min-height : 400px;
     }
     .guide .now {
         position : absolute;

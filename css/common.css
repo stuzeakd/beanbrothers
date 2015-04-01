@@ -204,7 +204,7 @@ html, body {
             transition: all 0.5s linear;
     visibility: hidden;
     opacity: 0;
-    background: radial-gradient(circle, rgba(0,0,0,0.5) , #000); 
+    background: radial-gradient(circle, rgba(0,0,0,0.8) 10%, #000 70%); 
     text-align: center;
 }
 #mobile-menu > .wrapper {
@@ -277,7 +277,7 @@ html, body {
 }
 #mobile-nav-trigger:checked ~ #mobile-menu {
     visibility: visible;
-    opacity: 0.8; 
+    opacity: 0.95; 
 }
 footer {
     clear : both;
@@ -360,10 +360,16 @@ footer .icon {
         height : 90px;
         font-size : 1.4em;
     }
+    #right-nav, #left-nav {
+        margin-top: 30px;
+    }
     #desktop-header .logo {
         height : 60px;
         width : 405px;
         margin: 15px;
+    }
+    #content {
+        margin-top : 90px;   
     }
        
 }

@@ -106,6 +106,7 @@
     clear : both;
 }
 .cafe .imageslider img{
+    width : 100%;
     position: relative;
 }
 
@@ -189,7 +190,7 @@
     float : right;
 }
 #hapjeong .article .right .script{
-    padding-top : 40px;
+    padding : 40px 0;
     margin-right: 50px;
 }
 
@@ -244,10 +245,12 @@
 }
 @media only screen and (min-width : 1824px){
     #content {
+        margin-top : 90px;
         font-size : 1.5em;   
     }
     #cafe-header {   
         font-size : 1.3em;
+        padding-top : 90px;
     }
     #backtotop {
         font-size : 1.3em;   
@@ -337,7 +340,8 @@
         
     }
     #hapjeong .imageslider > img {
-        left : -160px;
+        width : 120%;
+        left : -20%;
     }
     
 }
